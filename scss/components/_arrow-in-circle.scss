@@ -1,0 +1,40 @@
+.arrow-in-circle {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border: 1px solid $white-001;
+	opacity: 0.7;
+	border-radius: 50%;
+	&::before,
+	&::after {
+		position: absolute;
+		top: 54%;
+		left: 50%;
+		transform-origin: left;
+		transform: translateX(0) rotate(-45deg);
+		content: '';
+		background-color: $white-001;
+		display: block;
+		width: 6px;
+		height: 1px;
+	}
+	&::after {
+		transform: translateX(0) rotate(-135deg);
+	}
+	&--left {
+		transform: rotate(90deg);
+	}
+	&--right {
+		transform: rotate(-90deg);
+	}
+	&--up {
+		transform: rotate(180deg);
+	}
+	&--hoverEfects {
+		cursor: pointer;
+		transition: all 0.1s ease-in-out;
+		&:hover {
+			opacity: unset;
+		}
+	}
+}

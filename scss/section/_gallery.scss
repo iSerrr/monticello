@@ -1,0 +1,69 @@
+.gallery {
+	padding-bottom: 140px;
+	@include mobile {
+		padding-bottom: 30px;
+	}
+	@include tablets {
+		padding-bottom: 30px;
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+	}
+	&__imgConteiner {
+		position: relative;
+		padding: 0 10px 8px 0;
+		&--360 {
+			cursor: pointer;
+			&::before {
+				@include pos_50_50;
+				content: '';
+				visibility: hidden;
+				opacity: 0;
+				display: block;
+				width: 80px;
+				height: 80px;
+				transition: all 0.2s ease-in-out;
+				background: url('./assets/img/gallery/360.png') no-repeat 50% 50% / cover;
+			}
+			&:hover::before {
+				visibility: visible;
+				opacity: unset;
+			}
+		}
+	}
+	&__title {
+		margin: 0 0 95px 0;
+		@include mobile {
+			margin: 0 0 30px 0;
+		}
+		@include tablets {
+			margin: 0 0 40px 0;
+		}
+	}
+	&__content {
+		width: 100%;
+		height: 450px;
+		position: relative;
+		margin: 0 0 49px 0;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		transition: all 0.5s ease-out;
+		@include mobile {
+			margin: 0 0 30px 0;
+		}
+		@include tablets {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0 0 30px 0;
+		}
+	}
+	&__Btn {
+		width: 190px;
+		@include mobile {
+			width: 100%;
+		}
+	}
+}

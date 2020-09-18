@@ -1,0 +1,51 @@
+//! Core
+@import 'core/variables.scss'; //! Sass Variables
+@import 'core/mixins.scss'; //! Sass Mixins
+@import 'core/responsive.scss'; //! Sass Responsive
+
+//! Base
+@import 'base/reset.scss'; //! Reset/normalize
+@import 'base/body.scss'; //! Style only for body
+@import 'base/basic.scss'; //! Baic style
+@import 'base/typography.scss'; //! Base font and typography
+@import 'base/icomoon.scss'; //! Icomoon font
+
+//! Components
+@import 'components/buttons.scss'; //! Buttons
+@import 'components/main-menu.scss'; //! Main-Menu
+@import 'components/humburger.scss'; //! Humburger menu
+@import 'components/slick-slider.scss'; //! Slick Slider CSS
+@import 'components/social.scss'; //! Social list
+@import 'components/header-slider.scss'; //! Header slider
+@import 'components/news-slider.scss'; //! Latest-news slider
+@import 'components/arrow-in-circle.scss'; //! arrow-in-circle
+@import 'components/dots-for-slider.scss'; //! dots-for-slider
+@import 'components/masonry.scss'; //! Masonry custom style
+
+//! Section
+@import 'section/header.scss'; //! Header
+@import 'section/what-we-do.scss'; //! What-We-Do
+@import 'section/latest-news.scss'; //! Lattest-news
+@import 'section/gallery.scss'; //! Gallery
+@import 'section/contacts.scss'; //! Contacts
+@import 'section/footer.scss'; //! Footer
+
+//? turn off
+.header {
+	// display: none;
+}
+.what-we-do {
+	// display: none;
+}
+.latest-news {
+	// display: none;
+}
+.gallery {
+	// display: none;
+}
+.map {
+	// display: none;
+}
+.footer {
+	// display: none;
+}

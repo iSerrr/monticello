@@ -1,0 +1,218 @@
+.what-we-do {
+	width: 100%;
+	overflow: hidden;
+	padding: 99px 0 0 0;
+	@include mobile {
+		padding: 30px 15px;
+	}
+	@include tablets {
+		padding: 30px 15px;
+	}
+	&__title {
+		margin-bottom: 166px;
+		@include mobile {
+			margin-bottom: 30px;
+		}
+		@include tablets {
+			margin-bottom: 60px;
+		}
+		@include laptops {
+			margin-bottom: 8%;
+		}
+	}
+	&__content {
+		width: 100%;
+		@include flex_row_beetween;
+		margin-bottom: 207px;
+		@include mobile {
+			@include flex_column_center;
+			margin-bottom: 60px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@include tablets {
+			@include flex_column_center;
+			margin-bottom: 80px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@include laptops {
+			margin-bottom: 7%;
+		}
+	}
+	&__content--reverse {
+		flex-direction: row-reverse;
+		margin-bottom: 140px;
+		.what-we-do__imgConteiner {
+			&::before {
+				background-color: #7e5aff;
+				top: -15%;
+				left: initial;
+				right: -34%;
+			}
+		}
+		@include mobile {
+			flex-direction: column;
+			&::before {
+				display: none;
+			}
+		}
+		@include tablets {
+			flex-direction: column;
+			&::before {
+				display: none;
+			}
+		}
+		@include laptops {
+			.what-we-do__imgConteiner {
+				margin-right: 0;
+				margin-left: 50px;
+				&::before {
+					background-color: #7e5aff;
+					top: -15%;
+					left: initial;
+					right: -15%;
+				}
+			}
+		}
+	}
+	&__imgConteiner {
+		position: relative;
+		width: 630px;
+		&::before {
+			top: -15%;
+			left: -34%;
+			position: absolute;
+			z-index: 2;
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			width: 585px;
+			height: 470px;
+			background-color: #55b7ff;
+		}
+		@include mobile {
+			width: 100%;
+			margin-bottom: 30px;
+			&::before {
+				display: none;
+			}
+		}
+		@include tablets {
+			width: 100%;
+			margin-bottom: 30px;
+			&::before {
+				display: none;
+			}
+		}
+		@include laptops {
+			margin-right: 50px;
+			&::before {
+				top: -15%;
+				left: -15%;
+				position: absolute;
+				z-index: 2;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+
+				background-color: #55b7ff;
+			}
+		}
+	}
+	&__img {
+		position: relative;
+		z-index: 3;
+		width: 100%;
+		@include mobile {
+			border: 10px solid #55b7ff;
+			border-radius: 3px;
+		}
+		@include tablets {
+			border: 10px solid #55b7ff;
+			border-radius: 3px;
+		}
+	}
+	&__desc {
+		padding: 42px 0 0 0;
+		width: 470px;
+		@include mobile {
+			padding: 0;
+			width: 100%;
+		}
+		@include tablets {
+			padding: 0;
+			width: 100%;
+		}
+	}
+	&__header {
+		color: $darkBlue-001;
+		font-family: $GothamBold;
+		font-size: 44px;
+		line-height: 24px;
+		margin-bottom: 36px;
+		text-transform: uppercase;
+		@include mobile {
+			font-size: 25px;
+		}
+		@include tablets {
+			font-size: 35px;
+		}
+		@include laptops {
+			line-height: 1;
+		}
+	}
+	&__subTitle {
+		font-family: $GothamBook;
+		font-size: 22px;
+		margin-bottom: 17px;
+		@include mobile {
+			font-size: 20px;
+		}
+		@include tablets {
+			font-size: 25px;
+		}
+	}
+	&__text {
+		color: $darkBlue-002;
+		font-family: 'Open Sans';
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 30px;
+		margin-bottom: 34px;
+		@include mobile {
+			text-align: justify;
+		}
+		@include tablets {
+			text-align: justify;
+		}
+	}
+	&__Btn {
+		margin-bottom: 50px;
+		@include mobile {
+			margin-bottom: 25px;
+		}
+		@include tablets {
+			margin-bottom: 25px;
+		}
+	}
+	&__adress {
+		color: $darkBlue-001;
+		font-family: $OpensansItalic;
+		font-size: 18px;
+		line-height: 30px;
+		margin-bottom: 50px;
+		@include mobile {
+			font-size: 15px;
+			margin-bottom: 0;
+		}
+		@include tablets {
+			font-size: 15px;
+			margin-bottom: 0;
+		}
+	}
+}

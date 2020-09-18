@@ -1,0 +1,74 @@
+.header {
+	width: 100%;
+	position: relative;
+	&__navBar {
+		z-index: 100;
+		width: 100%;
+		height: 100px;
+		margin: 50px 0 0;
+		position: fixed;
+		transition: all 0.2s ease-out;
+		&.fix {
+			background: linear-gradient(45deg, rgba(85, 183, 255, 1) 0%, rgba(126, 90, 255, 1) 100%);
+			background: -o-linear-gradient(45deg, rgba(85, 183, 255, 1) 0%, rgba(126, 90, 255, 1) 100%);
+			margin: 0;
+			box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+		}
+		@include mobile {
+			position: fixed;
+			margin: 0;
+			padding: 0 15px;
+			height: 60px;
+		}
+		@include tablets {
+			position: fixed;
+			margin: 0;
+			padding: 0 15px;
+			height: 100px;
+		}
+	}
+	&__navBar-conteiner {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 14px;
+		height: 100%;
+		@include flex_row_beetween;
+		@include mobile {
+			margin: 0;
+			padding: 0 15px;
+			height: 100%;
+		}
+		@include tablets {
+			margin: 0;
+			padding: 0 15px;
+			height: 100%;
+		}
+	}
+	&__logo {
+		@include mobile {
+			width: 150px;
+		}
+	}
+	&__menuConteiner {
+		width: calc(668 / 1170 * 100%);
+		@include mobile {
+			width: 50px;
+		}
+		@include tablets {
+			width: 50px;
+		}
+	}
+	&__social {
+		@media (max-width: 1100px) {
+			display: none;
+		}
+		padding: 0 1px 0 92px;
+	}
+	&__sliderConteiner {
+	}
+}
+.moveDown {
+	@include posX_50;
+	bottom: 49px;
+}

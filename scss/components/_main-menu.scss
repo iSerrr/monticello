@@ -1,0 +1,125 @@
+.mainMenu {
+	@include flex_row_end_center;
+	margin: 0 0 0 10.6128%;
+	width: 100%;
+	&.transition {
+		transition: transform 0.5s ease-out;
+	}
+	@include mobile {
+		position: fixed;
+		top: 60px;
+		left: 0;
+		z-index: 1000;
+		width: 100vw;
+		height: calc(100vh - 60px);
+		background: linear-gradient(45deg, #55b7ff 0%, #7e5aff 100%);
+		@include flex_column_center;
+		transform: translateX(-100%);
+		&.active {
+			transform: translateX(0);
+		}
+	}
+	@include tablets {
+		position: fixed;
+		top: 100px;
+		left: 0;
+		z-index: 100;
+		width: 100vw;
+		height: calc(100vh - 100px);
+		background: linear-gradient(45deg, #55b7ff 0%, #7e5aff 100%);
+		@include flex_column_center;
+		transform: translateX(-100%);
+		&.active {
+			transform: translateX(0);
+		}
+	}
+	@media (max-width: 1100px) {
+		margin: 0;
+	}
+	&__item {
+		cursor: pointer;
+		width: calc(167 / 669 * 100%);
+		padding: 0 0 0 42px;
+		min-width: 120px;
+		max-width: 167px;
+		@include mobile {
+			width: 100%;
+			max-width: initial;
+			text-align: center;
+			padding: 0;
+			margin: 45px 0;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		@include tablets {
+			width: 100%;
+			max-width: initial;
+			text-align: center;
+			padding: 0;
+			margin: 45px 0;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	&__link {
+		position: relative;
+		color: $white-001;
+		font-family: $GothamBook;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: all 0.15s ease-in-out;
+		letter-spacing: 0.8px;
+		&::before {
+			top: 50%;
+			transform: translateY(-50%);
+			left: -24px;
+			position: absolute;
+			content: '';
+			display: block;
+			width: 7px;
+			height: 7px;
+			border: 1px solid $white-001;
+			border-radius: 50%;
+			transition: all 0.15s ease-in-out;
+		}
+		&::after {
+			visibility: hidden;
+			opacity: 0;
+			top: 3px;
+			content: '';
+			display: block;
+			width: 1px;
+			height: 100px;
+			background-color: $white-001;
+			position: absolute;
+			left: -20px;
+			transform-origin: top;
+			transform: rotate(180deg);
+			transition: all 0.15s ease-in-out;
+		}
+		&.active::before {
+			background-color: $white-001;
+		}
+		&:hover::after {
+			visibility: visible;
+			opacity: unset;
+		}
+		@include mobile {
+			font-size: 30px;
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+		@include tablets {
+			font-size: 30px;
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+	}
+}

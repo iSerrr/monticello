@@ -1,0 +1,38 @@
+.dots {
+	padding: 0 0 33px 0;
+	&--horizontal {
+		display: flex;
+	}
+	.slick-active {
+		button {
+			&::before {
+				background-color: $white-001;
+			}
+		}
+	}
+	li {
+		margin: 33px 0;
+		button {
+			color: transparent;
+			background: transparent;
+			outline: none;
+			border: none;
+			line-height: 0;
+			cursor: pointer;
+			position: relative;
+			&::before {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				position: absolute;
+				content: '';
+				display: block;
+				width: 7px;
+				height: 7px;
+				border: 1px solid $white-001;
+				border-radius: 50%;
+				transition: all 0.15s ease-in-out;
+			}
+		}
+	}
+}

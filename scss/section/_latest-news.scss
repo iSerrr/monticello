@@ -1,0 +1,20 @@
+.latest-news {
+	background: url('./assets/img/latest-news/bg.png') no-repeat 100% / cover,
+		linear-gradient(45deg, #3c7fd4 0%, #24ccfa 100%);
+	padding-bottom: 209px;
+	@include mobile {
+		padding-bottom: 30px;
+	}
+	@include tablets {
+		padding-bottom: 30px;
+	}
+	&__title {
+		margin: 0 0 93px 0;
+		@include mobile {
+			margin: 0 0 50px 0;
+		}
+		@include tablets {
+			margin: 0 0 50px 0;
+		}
+	}
+}

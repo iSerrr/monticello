@@ -1,0 +1,43 @@
+.grid-item {
+	width: calc(292.5 / 1170 * 100%);
+	height: auto;
+	&--width2 {
+		width: calc(585 / 1170 * 100%);
+	}
+	&--height2 {
+		height: auto;
+	}
+	&--gigante {
+		order: -1;
+		width: calc(590 / 1170 * 100%);
+		height: auto;
+	}
+	@include mobile {
+		width: 100%;
+		&--width2 {
+			width: 100%;
+		}
+		&--height2 {
+			height: auto;
+		}
+	}
+	@include tablets {
+		width: 50%;
+		&--width2 {
+			width: 100%;
+		}
+		&--height2 {
+			height: auto;
+		}
+	}
+	@include laptops {
+		width: calc(292.5 / 1170 * 100%);
+		height: auto;
+		&--width2 {
+			width: calc(585 / 1170 * 100%);
+		}
+		&--height2 {
+			height: auto;
+		}
+	}
+}

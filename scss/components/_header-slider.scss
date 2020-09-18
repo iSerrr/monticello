@@ -1,0 +1,90 @@
+.slider {
+	width: 100%;
+	&__page {
+	}
+	&__pageConteiner {
+		position: relative;
+		overflow: hidden;
+		@include flex_column_center;
+		width: 100%;
+		height: 100vh;
+		background-color: #4b4b4b;
+		background: linear-gradient(45deg, #55b7ff 0%, #7e5aff 100%);
+		&::after {
+			z-index: 1;
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(45deg, rgba(85, 184, 255, 0.9) 0%, rgba(126, 90, 255, 0.9) 100%);
+		}
+		@include mobile {
+			padding: 0 15px;
+			max-height: 800px;
+		}
+		@mixin tablets {
+			padding: 0 15px;
+			max-height: 800px;
+		}
+	}
+	&__bgImg {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__content {
+		position: relative;
+		z-index: 2;
+		text-align: center;
+	}
+	&__title {
+		color: $white-001;
+		font-family: $GothamBold;
+		font-size: 80px;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		margin-bottom: 28px;
+		padding: 0 0 0 10px;
+		@include mobile {
+			font-size: 45px;
+		}
+		@include tablets {
+			font-size: 55px;
+		}
+		@include laptops {
+			font-size: 55px;
+		}
+	}
+	&__subTitle {
+		color: $white-001;
+		font-family: $GothamBook;
+		font-size: 18px;
+		text-transform: uppercase;
+		letter-spacing: 6px;
+		@include mobile {
+			font-size: 20px;
+		}
+		@include tablets {
+			padding: 0 75px;
+			width: 100%;
+			font-size: 25px;
+		}
+		@include laptops {
+			padding: 0 75px;
+			width: 100%;
+			font-size: 25px;
+		}
+	}
+	&__dots-position {
+		position: absolute;
+		top: 50%;
+		right: 34px;
+		transform: translateY(-50%);
+	}
+}
